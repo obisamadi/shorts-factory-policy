@@ -1,0 +1,52 @@
+:root {
+  --bg: #fbfaf8; --fg: #1f1e1c; --muted: #5c5955; --rule: #e3e0da;
+  --accent: #8a5a2b; --code-bg: #f2efe9;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171614; --fg: #e8e4dc; --muted: #a09b92; --rule: #33302b;
+    --accent: #d2a068; --code-bg: #232019;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0 1.5rem 5rem;
+  background: var(--bg); color: var(--fg);
+  font: 16px/1.65 ui-serif, Georgia, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 42rem; margin: 0 auto; }
+header { padding: 4rem 0 2rem; border-bottom: 1px solid var(--rule); margin-bottom: 2.5rem; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .5rem; letter-spacing: -.01em; }
+h2 {
+  font-size: 1.05rem; margin: 2.5rem 0 .75rem; letter-spacing: .04em;
+  text-transform: uppercase; font-family: ui-sans-serif, system-ui, sans-serif;
+  color: var(--accent);
+}
+h3 { font-size: 1rem; margin: 1.5rem 0 .5rem; }
+p, li { color: var(--fg); }
+.lede { font-size: 1.1rem; color: var(--muted); margin: 0; }
+.meta {
+  font-family: ui-sans-serif, system-ui, sans-serif; font-size: .8rem;
+  color: var(--muted); letter-spacing: .03em;
+}
+ul { padding-left: 1.2rem; }
+li { margin: .4rem 0; }
+code {
+  background: var(--code-bg); padding: .12em .4em; border-radius: 3px;
+  font: .86em ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+a { color: var(--accent); text-underline-offset: .2em; }
+.box {
+  border-left: 3px solid var(--accent); padding: .1rem 0 .1rem 1.1rem;
+  margin: 1.5rem 0; color: var(--muted);
+}
+footer {
+  margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+  font-family: ui-sans-serif, system-ui, sans-serif; font-size: .85rem; color: var(--muted);
+}
+footer a { margin-right: 1.2rem; }
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .93rem; }
+th, td { text-align: left; padding: .55rem .6rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-family: ui-sans-serif, system-ui, sans-serif; font-size: .78rem;
+     text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
